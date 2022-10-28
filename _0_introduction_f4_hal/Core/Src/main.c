@@ -1,20 +1,24 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+/* ************************************************************************************************************************
+ * ************************************************************************************************************************
+ * Driver: Bare Metal (Low Layer/Register) / Standard Peripheral Library (SPL) / Hardware Abstraction Layer Library (HAL)
+ * By Mustafa Onur Parlak
+ * GitHub Link: https://github.com/legarthos
+ * ***********************************************************************************************************************/
+/* ************************************************************************************************************************
+ * Project Purpose:
+ * It contains the basic notes and contents I took while learning STM32 with LL-SPL-HAL DRIVER.
+ * General Draft Code Style with Standard Peripheral Library
+ *
+ * ************************************************************************************************************************
+ * Peripherals to be used:
+ * GPIO (General Purpose Input Output)
+ *
+ * ************************************************************************************************************************
+ * Update Time and Reason:
+ * 2022.27.10 - Initialize
+ *
+ * ************************************************************************************************************************/
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
