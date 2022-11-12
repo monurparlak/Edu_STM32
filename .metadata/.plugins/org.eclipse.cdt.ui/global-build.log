@@ -1,4 +1,14 @@
-10:39:00 **** Incremental Build of configuration Debug for project _0-introduction_f1_spl ****
-make all 
-arm-atollic-eabi-g++ -fno-threadsafe-statics -c -g -mcpu=cortex-m3  -O0 -Wall -ffunction-sections -fdata-sections -mthumb -specs=nano.specs -fno-exceptions -fno-rtti -D"STM32F10X_MD" -D"USE_STDPERIPH_DRIVER"   -Isrc -ILibraries/STM32F10x_StdPeriph_Driver/inc -ILibraries/CMSIS/Device/ST/STM32F10x/Include -ILibraries/CMSIS/Include src/main.cpp -o Debug/src/main.o 
-arm-atollic-eabi-g++ -o "Debug/_0-introduction_f1_spl.elf" Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_fsmc.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_adc.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/misc.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_crc.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_can.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dac.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.o Debug/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.o Debug/src/stm32f1xx_it.o Debug/src/system_stm32f10x.o Debug/src/tiny_printf.o Debug/src/main.o Debug/src/startup_stm32f10x_md.o -lm -mthumb -mcpu=cortex-m3  -Wl,--gc-sections -T"stm32_flash.ld" -static  -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -specs=nano.specs -specs=nosys.specs  -Wl,-cref "-Wl,-Map=Debug/_0-introduction_f1_spl.map" -Wl,--defsym=malloc_getpagesize_P=0x1000
+04:46:29 **** Incremental Build of configuration Debug for project _0-stm32f4xx_drivers ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "_0-stm32f4xx_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Main_Files\TEST-STM\_0-stm32f4xx_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="_0-stm32f4xx_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: _0-stm32f4xx_drivers.elf
+ 
+arm-none-eabi-size   _0-stm32f4xx_drivers.elf 
+arm-none-eabi-objdump -h -S  _0-stm32f4xx_drivers.elf  > "_0-stm32f4xx_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    684	      8	   1568	   2260	    8d4	_0-stm32f4xx_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: _0-stm32f4xx_drivers.list
+ 
