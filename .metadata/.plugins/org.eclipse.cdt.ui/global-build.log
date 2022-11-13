@@ -1,14 +1,168 @@
-04:46:29 **** Incremental Build of configuration Debug for project _0-stm32f4xx_drivers ****
+01:49:51 **** Incremental Build of configuration Debug for project _0-stm32f4xx_drivers ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "_0-stm32f4xx_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Main_Files\TEST-STM\_0-stm32f4xx_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="_0-stm32f4xx_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: _0-stm32f4xx_drivers.elf
- 
-arm-none-eabi-size   _0-stm32f4xx_drivers.elf 
-arm-none-eabi-objdump -h -S  _0-stm32f4xx_drivers.elf  > "_0-stm32f4xx_drivers.list"
-   text	   data	    bss	    dec	    hex	filename
-    684	      8	   1568	   2260	    8d4	_0-stm32f4xx_drivers.elf
-Finished building: default.size.stdout
- 
-Finished building: _0-stm32f4xx_drivers.list
- 
+arm-none-eabi-gcc "../drivers/src/stm32f4xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"drivers/src/stm32f4xx_gpio_driver.d" -MT"drivers/src/stm32f4xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f4xx_gpio_driver.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+In file included from D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx_gpio_driver.h:11,
+                 from ../drivers/src/stm32f4xx_gpio_driver.c:9:
+../drivers/src/stm32f4xx_gpio_driver.c: In function 'GPIO_Init':
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:19: error: 'EXTI_RegDef_t' undeclared (first use in this function); did you mean 'RCC_RegDef_t'?
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                   ^~~~~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:106:4: note: in expansion of macro 'EXTI'
+  106 |    EXTI->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:19: note: each undeclared identifier is reported only once for each function it appears in
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                   ^~~~~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:106:4: note: in expansion of macro 'EXTI'
+  106 |    EXTI->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:106:4: note: in expansion of macro 'EXTI'
+  106 |    EXTI->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:108:4: note: in expansion of macro 'EXTI'
+  108 |    EXTI->RTSR &= ~( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:113:4: note: in expansion of macro 'EXTI'
+  113 |    EXTI->RTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:115:4: note: in expansion of macro 'EXTI'
+  115 |    EXTI->FTSR &= ~( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:120:4: note: in expansion of macro 'EXTI'
+  120 |    EXTI->RTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:122:4: note: in expansion of macro 'EXTI'
+  122 |    EXTI->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+      |    ^~~~
+../drivers/src/stm32f4xx_gpio_driver.c:128:22: warning: implicit declaration of function 'GPIO_BASEADDR_TO_CODE' [-Wimplicit-function-declaration]
+  128 |   uint8_t portcode = GPIO_BASEADDR_TO_CODE(pGPIOHandle->pGPIOx);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+In file included from D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx_gpio_driver.h:11,
+                 from ../drivers/src/stm32f4xx_gpio_driver.c:9:
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:150:21: error: 'SYSCFG_RegDef_t' undeclared (first use in this function); did you mean 'RCC_RegDef_t'?
+  150 | #define SYSCFG    ((SYSCFG_RegDef_t*)SYSCFG_BASEADDR)
+      |                     ^~~~~~~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:130:3: note: in expansion of macro 'SYSCFG'
+  130 |   SYSCFG->EXTICR[temp1] = portcode << ( temp2 * 4);
+      |   ^~~~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:150:37: error: expected expression before ')' token
+  150 | #define SYSCFG    ((SYSCFG_RegDef_t*)SYSCFG_BASEADDR)
+      |                                     ^
+../drivers/src/stm32f4xx_gpio_driver.c:130:3: note: in expansion of macro 'SYSCFG'
+  130 |   SYSCFG->EXTICR[temp1] = portcode << ( temp2 * 4);
+      |   ^~~~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:133:3: note: in expansion of macro 'EXTI'
+  133 |   EXTI->IMR |= 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber;
+      |   ^~~~
+../drivers/src/stm32f4xx_gpio_driver.c:126:11: warning: variable 'temp1' set but not used [-Wunused-but-set-variable]
+  126 |   uint8_t temp1 = pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber / 4 ;
+      |           ^~~~~
+../drivers/src/stm32f4xx_gpio_driver.c: In function 'GPIO_DeInit':
+../drivers/src/stm32f4xx_gpio_driver.c:185:3: warning: implicit declaration of function 'GPIOA_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  185 |   GPIOA_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:188:3: warning: implicit declaration of function 'GPIOB_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  188 |   GPIOB_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:191:3: warning: implicit declaration of function 'GPIOC_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  191 |   GPIOC_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:194:3: warning: implicit declaration of function 'GPIOD_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  194 |   GPIOD_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:197:3: warning: implicit declaration of function 'GPIOE_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  197 |   GPIOE_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:200:3: warning: implicit declaration of function 'GPIOF_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  200 |   GPIOF_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:203:3: warning: implicit declaration of function 'GPIOG_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  203 |   GPIOG_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:206:3: warning: implicit declaration of function 'GPIOH_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  206 |   GPIOH_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c:209:3: warning: implicit declaration of function 'GPIOI_REG_RESET'; did you mean 'GPIO_PIN_RESET'? [-Wimplicit-function-declaration]
+  209 |   GPIOI_REG_RESET();
+      |   ^~~~~~~~~~~~~~~
+      |   GPIO_PIN_RESET
+../drivers/src/stm32f4xx_gpio_driver.c: In function 'GPIO_IRQInterruptConfig':
+../drivers/src/stm32f4xx_gpio_driver.c:356:5: error: 'NVIC_ISER0' undeclared (first use in this function)
+  356 |    *NVIC_ISER0 |= ( 1 << IRQNumber );
+      |     ^~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:361:5: error: 'NVIC_ISER1' undeclared (first use in this function)
+  361 |    *NVIC_ISER1 |= ( 1 << (IRQNumber % 32) );
+      |     ^~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:366:5: error: 'NVIC_ISER2' undeclared (first use in this function)
+  366 |    *NVIC_ISER2 |= ( 1 << (IRQNumber % 64) );
+      |     ^~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:373:5: error: 'NVIC_ICER0' undeclared (first use in this function)
+  373 |    *NVIC_ICER0 |= ( 1 << IRQNumber );
+      |     ^~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:377:5: error: 'NVIC_ICER1' undeclared (first use in this function)
+  377 |    *NVIC_ICER1 |= ( 1 << (IRQNumber % 32) );
+      |     ^~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:382:5: error: 'NVIC_ICER2' undeclared (first use in this function)
+  382 |    *NVIC_ICER2 |= ( 1 << (IRQNumber % 64) );
+      |     ^~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c: In function 'GPIO_IRQPriorityConfig':
+../drivers/src/stm32f4xx_gpio_driver.c:410:53: error: 'NO_PR_BITS_IMPLEMENTED' undeclared (first use in this function)
+  410 |  uint8_t shift_amount = ( 8 * iprx_section) + ( 8 - NO_PR_BITS_IMPLEMENTED) ;
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:412:6: error: 'NVIC_PR_BASE_ADDR' undeclared (first use in this function)
+  412 |  *(  NVIC_PR_BASE_ADDR + iprx ) |=  ( IRQPriority << shift_amount );
+      |      ^~~~~~~~~~~~~~~~~
+In file included from D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx_gpio_driver.h:11,
+                 from ../drivers/src/stm32f4xx_gpio_driver.c:9:
+../drivers/src/stm32f4xx_gpio_driver.c: In function 'GPIO_IRQHandling':
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:19: error: 'EXTI_RegDef_t' undeclared (first use in this function); did you mean 'RCC_RegDef_t'?
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                   ^~~~~~~~~~~~~
+../drivers/src/stm32f4xx_gpio_driver.c:432:5: note: in expansion of macro 'EXTI'
+  432 |  if(EXTI->PR & ( 1 << PinNumber))
+      |     ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:432:5: note: in expansion of macro 'EXTI'
+  432 |  if(EXTI->PR & ( 1 << PinNumber))
+      |     ^~~~
+D:/Main_Files/TEST-STM/_0-stm32f4xx_drivers/drivers/inc/stm32f4xx.h:149:33: error: expected expression before ')' token
+  149 | #define EXTI    ((EXTI_RegDef_t*)EXTI_BASEADDR)
+      |                                 ^
+../drivers/src/stm32f4xx_gpio_driver.c:435:3: note: in expansion of macro 'EXTI'
+  435 |   EXTI->PR |= ( 1 << PinNumber);
+      |   ^~~~
+make: *** [drivers/src/subdir.mk:19: drivers/src/stm32f4xx_gpio_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.

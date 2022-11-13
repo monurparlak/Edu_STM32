@@ -224,27 +224,12 @@ typedef struct {
  * Clock Disable Macros for SYSCFG peripheral
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#define ENABLE				1
+#define DISABLE				0
+#define SET					ENABLE
+#define RESET				DISABLE
+#define GPIO_PIN_SET		SET
+#define GPIO_PIN_RESET		RESET
 
 
 
