@@ -10937,3 +10937,40 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2022-11-15 02:22:50.207 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-15 02:23:43.000
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-15 02:23:43.154
+!MESSAGE Log4j initialized with config file D:\Main_Files\TEST-STM\.metadata\.log4j.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2022-11-15 02:23:50.123
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-11-15 02:23:53.295
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\monur'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-15 02:23:58.050
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-11-15 02:24:25.101
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/codetogether/updates/ct20220914/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-11-15 02:24:38.311
+!MESSAGE Using unsafe http transport to retrieve http://downloads.genuitec.com/downloads/products/devstyle/updates/ds20220613a, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-15 03:53:48.292
+!MESSAGE Indexed '_0-stm32f4xx_drivers' (5 sources, 57 headers) in 0,911 sec: 2.226 declarations; 3.737 references; 0 unresolved inclusions; 2 syntax errors; 132 unresolved names (%2,2)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-15 03:54:39.008
+!MESSAGE Indexed '_0-stm32f4xx_drivers' (5 sources, 56 headers) in 0,494 sec: 2.226 declarations; 3.736 references; 0 unresolved inclusions; 2 syntax errors; 132 unresolved names (%2,2)
