@@ -1,12 +1,12 @@
 /*
- * stm32f4xx_gpio_driver.c
+ * stm32f407xx_gpio_driver.c
  *
- *  Created on: 14 Kas 2022
- *      Author: monur
+ *  Created on: Jan 29, 2019
+ *      Author: admin
  */
 
 
-#include "stm32f4xx_gpio_driver.h"
+#include "stm32f407xx_gpio_driver.h"
 
 
 /*********************************************************************
@@ -80,7 +80,8 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi)
  * @Note              -
 
  */
-void GPIO_Init(GPIO_Handle_t *pGPIOHandle) {
+void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
+{
 	 uint32_t temp=0; //temp. register
 
 	 //enable the peripheral clock

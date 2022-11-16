@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "stm32f407xx_usart_driver.h": "c",
+        "stm32f407xx_rcc_driver.h": "c"
+    }
+}

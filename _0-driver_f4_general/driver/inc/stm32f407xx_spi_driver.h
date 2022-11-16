@@ -1,14 +1,14 @@
 /*
- * stm32f4xx_spi_driver.h
+ * stm32f407xx_spi_driver.h
  *
- *  Created on: 15 Kas 2022
- *      Author: monur
+ *  Created on: Feb 9, 2019
+ *      Author: admin
  */
 
-#ifndef INC_STM32F4XX_SPI_DRIVER_H_
-#define INC_STM32F4XX_SPI_DRIVER_H_
+#ifndef INC_STM32F407XX_SPI_DRIVER_H_
+#define INC_STM32F407XX_SPI_DRIVER_H_
 
-#include "stm32f4xx.h"
+#include "stm32f407xx.h"
 
 /*
  *  Configuration structure for SPIx peripheral
@@ -23,6 +23,7 @@ typedef struct
 	uint8_t SPI_CPHA;
 	uint8_t SPI_SSM;
 }SPI_Config_t;
+
 
 /*
  *Handle structure for SPIx peripheral
@@ -39,6 +40,7 @@ typedef struct
 	uint8_t 		RxState;	/* !< To store Rx state > */
 }SPI_Handle_t;
 
+
 /*
  * SPI application states
  */
@@ -54,11 +56,14 @@ typedef struct
 #define SPI_EVENT_OVR_ERR    3
 #define SPI_EVENT_CRC_ERR    4
 
+
+
 /*
  * @SPI_DeviceMode
  */
 #define SPI_DEVICE_MODE_MASTER    1
 #define SPI_DEVICE_MODE_SLAVE     0
+
 
 /*
  * @SPI_BusConfig
@@ -103,12 +108,15 @@ typedef struct
 #define SPI_SSM_EN     1
 #define SPI_SSM_DI     0
 
+
 /*
  * SPI related status flags definitions
  */
 #define SPI_TXE_FLAG    ( 1 << SPI_SR_TXE)
 #define SPI_RXNE_FLAG   ( 1 << SPI_SR_RXNE)
 #define SPI_BUSY_FLAG   ( 1 << SPI_SR_BSY)
+
+
 
 /******************************************************************************************
  *								APIs supported by this driver
@@ -124,6 +132,7 @@ void SPI_PeriClockControl(SPI_RegDef_t *pSPIx, uint8_t EnorDi);
  */
 void SPI_Init(SPI_Handle_t *pSPIHandle);
 void SPI_DeInit(SPI_RegDef_t *pSPIx);
+
 
 /*
  * Data Send and Receive
@@ -158,4 +167,4 @@ uint8_t I2C_DeviceMode(I2C_RegDef_t *I2Cx);
  */
 void SPI_ApplicationEventCallback(SPI_Handle_t *pSPIHandle,uint8_t AppEv);
 
-#endif /* INC_STM32F4XX_SPI_DRIVER_H_ */
+#endif /* INC_STM32F407XX_SPI_DRIVER_H_ */
