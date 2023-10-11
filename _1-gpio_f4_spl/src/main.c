@@ -10,6 +10,7 @@
  * It contains the basic notes and contents I took while learning STM32 with LL-SPL-HAL DRIVER.
  * General Draft Code Style with Standard Peripheral Library
  *
+ 
  * ************************************************************************************************************************
  * Peripherals to be used:
  * GPIO (General Purpose Input Output)
